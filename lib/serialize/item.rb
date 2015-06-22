@@ -13,9 +13,13 @@ class Item
 		display
 	end
 
+	def show
+		display
+	end
+
 	private
 
 	def display
-		"#{name}: #{serial_number}"
+		"#{name}(#{serial_number})"
 	end
 end
