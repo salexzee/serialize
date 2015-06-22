@@ -10,9 +10,6 @@ class Container
 	def add_item(name, serial_number)
 		item = Item.new(name, serial_number)
 		items.push(item)
-		puts "New item added!"
-		puts "-"*10
-		puts "\n"
 	end
 
 	def show_items

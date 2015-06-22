@@ -1,4 +1,4 @@
-require 'item'
+require_relative '../lib/serialize/item'
 
 RSpec.describe Item do
   describe '#initialize' do

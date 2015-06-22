@@ -18,10 +18,13 @@ loop do
 		puts "Item name: "
 		print ":"
 		name = gets.chomp
-		pring ":"
+		print ":"
 		puts "Serial number: "
 		serial_number = gets.chomp
 		container.add_item(name, serial_number)
+		puts "New item added!"
+		puts "-"*10
+		puts "\n"
 	when 's'
 		container.show_items
 	when 'e'
