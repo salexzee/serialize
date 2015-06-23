@@ -28,4 +28,14 @@ class Container
 		puts "\n"
 	end
 
+	def search(term)
+		results = []
+		items.each do |item|
+			if item.contains?(term)
+				results.push(item)
+			end
+		end
+		results
+	end
+
 end

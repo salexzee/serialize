@@ -2,7 +2,8 @@ require_relative 'serialize/container'
 
 def options
 	puts "Add Item(a)"
-	puts "Show Items(s)"
+	puts "Display Items(d)"
+	puts "Search(s)"
 	puts "Exit(e)"
 end
 
@@ -25,8 +26,12 @@ loop do
 		puts "New item added!"
 		puts "-"*10
 		puts "\n"
-	when 's'
+	when 'd'
 		container.show_items
+	when 's'
+		print "Search term: "
+		term = gets.chomp
+		container.search(term)
 	when 'e'
 		exit
 	end
