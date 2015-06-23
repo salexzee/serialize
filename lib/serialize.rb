@@ -16,11 +16,9 @@ loop do
 	value = gets.chomp.downcase
 	case value
 	when 'a'
-		puts "Item name: "
-		print ":"
+		print "Item name: "
 		name = gets.chomp
-		print ":"
-		puts "Serial number: "
+		print "Serial number: "
 		serial_number = gets.chomp
 		container.add_item(name, serial_number)
 		puts "New item added!"
