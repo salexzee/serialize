@@ -12,20 +12,8 @@ class Container
 		items.push(item)
 	end
 
-	def show_items
-		if !items.empty?
-			puts "\nShowing Items"
-			puts "-"*10
-			num = 1
-			items.each do |item|
-				puts num.to_s + ": " + item.show
-				num += 1
-			end
-			puts "-"*10
-		else
-			puts "\nNo items to display."
-		end
-		puts "\n"
+	def return_items(items)
+		items
 	end
 
 	def search(term)

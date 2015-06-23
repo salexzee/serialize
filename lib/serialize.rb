@@ -27,7 +27,20 @@ loop do
 		puts "-"*10
 		puts "\n"
 	when 'd'
-		container.show_items
+		items = container.return_items(container.items)
+		if !items.empty?
+			puts "\nShowing Items"
+			puts "-"*10
+			num = 1
+			items.each do |item|
+				puts num.to_s + ": " + item.show
+				num += 1
+			end
+			puts "-"*10
+		else
+			puts "\nNo items to display."
+		end
+		puts "\n"
 	when 's'
 		print "Search term: "
 		term = gets.chomp
