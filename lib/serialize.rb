@@ -42,7 +42,20 @@ loop do
 	when 's'
 		print "Search term: "
 		term = gets.chomp
-		container.search(term)
+		results = container.search(term)
+		if !results.empty?
+			puts "\nShowing Items"
+			puts "-"*10
+			num = 1
+			results.each do |result|
+				puts num.to_s + ": " + result.show
+				num += 1
+			end
+			puts "-"*10
+		else
+			puts "\nNo items match your query."
+		end
+		puts "\n"
 	when 'e'
 		exit
 	end

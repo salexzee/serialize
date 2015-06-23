@@ -19,7 +19,7 @@ class Container
 	def search(term)
 		results = []
 		items.each do |item|
-			if item.contains?(term)
+			if item.name.downcase.include?(term.downcase) || item.serial_number.downcase.include?(term.downcase)
 				results.push(item)
 			end
 		end
