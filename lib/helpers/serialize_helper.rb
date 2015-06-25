@@ -1,6 +1,7 @@
 def options
 	puts "Add Item(a)"
 	puts "Display Items(d)"
+	puts "Remove Item(r)"
 	puts "Search(s)"
 	puts "Exit(e)"
 end

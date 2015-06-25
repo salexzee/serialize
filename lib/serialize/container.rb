@@ -26,4 +26,13 @@ class Container
 		results
 	end
 
+	def remove_item(index)
+		if !items.empty?
+			items.delete_at(index)
+			true
+		else
+			false
+		end
+	end
+
 end

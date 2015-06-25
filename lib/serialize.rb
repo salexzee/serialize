@@ -22,6 +22,21 @@ loop do
 		items = container.return_items(container.items)
 		display_items(items)
 		puts line_break
+	when 'r'
+		puts line_break
+		print "What number item would you like to remove from the list? "
+		index = gets.chomp
+		if index.to_i > 0
+			index = index.to_i - 1
+			if container.remove_item(index.to_i)
+				puts "Item removed successfully!"
+			else
+				puts "There is no item in that location."
+			end
+		else
+			puts "That is not a valid choice."
+		end
+		puts line_break
 	when 's'
 		print "Search term: "
 		term = gets.chomp
