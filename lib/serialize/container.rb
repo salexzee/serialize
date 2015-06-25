@@ -7,6 +7,17 @@ class Container
 		@items = []
 	end
 
+	def open
+		@file = File.open('output/serial_numbers.txt', 'r+')
+		@file.readlines.each do |line|
+			@items.push(line)
+		end
+	end
+
+	def save
+		
+	end
+
 	def add_item(name, serial_number)
 		item = Item.new(name, serial_number)
 		items.push(item)
