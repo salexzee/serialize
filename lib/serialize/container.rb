@@ -5,19 +5,20 @@ class Container
 	
 	def initialize
 		@items = []
-		@file = false
 	end
 
-	def open(file, permission)
-		@file = File.open(file, permission)
-		@file.readlines.each do |line|
-			@items.push(line)
+	def open
+		file = File.open("lib/output/output.txt", "r").readlines.each do |line|
+			start_index = line.index("(")
+			end_index = line.index(")")
+			add_item(line[0..(start_index - 1)], line[(start_index + 1)..(end_index - 1)])
 		end
 	end
 
 	def save
-		@items.each do |item|
-			@file.write(item)
+		file = File.open("lib/output/output.txt", "w")
+		items.each do |item|
+			file.puts item
 		end
 	end
 
