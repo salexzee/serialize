@@ -5,17 +5,20 @@ class Container
 	
 	def initialize
 		@items = []
+		@file = false
 	end
 
-	def open
-		@file = File.open('output/serial_numbers.txt', 'r+')
+	def open(file, permission)
+		@file = File.open(file, permission)
 		@file.readlines.each do |line|
 			@items.push(line)
 		end
 	end
 
 	def save
-		
+		@items.each do |item|
+			@file.write(item)
+		end
 	end
 
 	def add_item(name, serial_number)

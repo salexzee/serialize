@@ -4,6 +4,7 @@ require_relative 'helpers/serialize_helper.rb'
 puts "\nWelcome to Serialize."
 puts "An application for storing the serial numbers of valuable items."
 container = Container.new
+container.open('output/serial_numbers.txt', 'r+')
 loop do
 	options
 	print ":"
@@ -44,6 +45,7 @@ loop do
 		display_items(results, "\nNo matches to display.")
 		puts line_break
 	when 'e'
+		container.save
 		exit
 	end
 end
