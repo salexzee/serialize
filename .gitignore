@@ -3,3 +3,6 @@
 
 # Ignore bundler config.
 /.bundle
+
+# Ignore any output files
+lib/output
