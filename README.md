@@ -8,7 +8,9 @@ A command line tool for storing the serial numbers of your most valuable items.
 2. Open a terminal window and navigate to the folder you woule like to store Serialize in.
 3. Copy/Paste the following line into your terminal window, making sure you change `your_username` to whatever your GitHub username is: `git@github.com:your_username/serialize.git`
 4. Copy/Paste `cd serialize` into your terminal window to move into the recently cloned folder
-5. Copy/Paste `ruby lib/serialize.rb` into your terminal window to run the application.
+5. Copy/Paste `mkdir lib/output` to create an output folder. Nothing in this folder will be tracked with git.
+6. Copy/Paste `touch lib/output/output.txt` to create the output file for your serial numbers.
+7. Copy/Paste `ruby lib/serialize.rb` into your terminal window to run the application.
 
 This application requires that you have Ruby installed.
 
