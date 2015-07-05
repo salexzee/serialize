@@ -43,6 +43,7 @@ class Container
 
 	def remove_item(index)
 		if !items.empty?
+			return false if index > items.length
 			items.delete_at(index)
 			true
 		else
