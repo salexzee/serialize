@@ -15,7 +15,9 @@ loop do
 		name = gets.chomp
 		print "Serial number: "
 		serial_number = gets.chomp
-		container.add_item(name, serial_number)
+		print "Price: "
+		price = gets.chomp
+		container.add_item(name, serial_number, price)
 		puts "New item added!"
 		puts seperator
 		puts line_break
