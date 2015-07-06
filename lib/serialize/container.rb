@@ -11,7 +11,7 @@ class Container
 		file = File.open("lib/output/output.txt", "r").readlines.each do |line|
 			start_index = line.index("(")
 			end_index = line.index(")")
-			add_item(line[0..(start_index - 1)], line[(start_index + 1)..(end_index - 1)])
+			add_item(line[0..(start_index - 1)], line[(start_index + 1)..(end_index - 1)], 0)
 		end
 	end
 
@@ -22,8 +22,8 @@ class Container
 		end
 	end
 
-	def add_item(name, serial_number)
-		item = Item.new(name, serial_number)
+	def add_item(name, serial_number, price=0)
+		item = Item.new(name, serial_number, price)
 		items.push(item)
 	end
 

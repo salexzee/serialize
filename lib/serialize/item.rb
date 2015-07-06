@@ -1,8 +1,9 @@
 class Item
-	attr_reader :name, :serial_number
-	def initialize(name, serial_number)
+	attr_reader :name, :serial_number, :price
+	def initialize(name, serial_number, price)
 		@name = name
 		@serial_number = serial_number
+		@price = price
 	end
 
 	def to_s
@@ -20,6 +21,6 @@ class Item
 	private
 
 	def display
-		"#{name}(#{serial_number})"
+		"#{name}(#{serial_number}) - $#{price}"
 	end
 end
