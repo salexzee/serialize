@@ -3,11 +3,12 @@ def options
 	puts "Display Items(d)"
 	puts "Remove Item(r)"
 	puts "Search(s)"
+	puts "App Info(i)"
 	puts "Exit(e)"
 end
 
 def seperator
-	"-"*10
+	"-" * 50
 end
 
 def line_break
@@ -16,7 +17,9 @@ end
 
 def display_items(items, phrase="\nNo items to display.")
 	if !items.empty?
-		puts "\nShowing Items"
+		puts line_break
+		puts seperator
+		puts "Showing Items"
 		puts seperator
 		num = 1
 		items.each do |item|

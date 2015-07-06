@@ -1,3 +1,4 @@
+require_relative 'modules/app'
 require_relative 'serialize/container'
 require_relative 'helpers/serialize_helper.rb'
 
@@ -45,6 +46,17 @@ loop do
 		term = gets.chomp
 		results = container.search(term)
 		display_items(results, "\nNo matches to display.")
+		puts line_break
+	when 'i'
+		puts line_break
+		puts seperator
+		puts 'Application Information'
+		puts seperator
+		puts "Name: #{App::NAME}"
+		puts "Version: #{App::VERSION}"
+		puts "Copyright: #{App::COPYRIGHT}"
+		puts "Creator: #{App::CREATOR}"
+		puts seperator
 		puts line_break
 	when 'e'
 		container.save
