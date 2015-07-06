@@ -1,4 +1,6 @@
-#Serialize
+#Serialize 
+
+v1.0
 
 A command line tool for storing the serial numbers of your most valuable items.
 
@@ -17,3 +19,7 @@ This application requires that you have Ruby installed.
 Ruby 2.2.1 and up have been tested.
 
 Serialize has only been tested in a Mac OSX environment, but will most likely work on any Linux system. It may also work with Windows, but the commands will be a little bit different. You can test this if you'd like.
+
+*Disclaimers*
+
+- *Price currently doesn't save*
