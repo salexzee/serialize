@@ -21,6 +21,4 @@ Ruby 2.2.1 and up have been tested.
 Serialize has only been tested in a Mac OSX environment, but will most likely work on any Linux system. It may also work with Windows, but the commands will be a little bit different. You can test this if you'd like.
 
 *Disclaimers*
-
-- *Price currently doesn't save*
 - *Do NOT edit output.txt or you could cause problems with the program*
