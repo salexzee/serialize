@@ -11,7 +11,7 @@ class Container
 		file = File.open("lib/output/output.txt", "r").readlines.each do |line|
 			start_index = line.index("(")
 			end_index = line.index(")")
-			add_item(line[0..(start_index - 1)], line[(start_index + 1)..(end_index - 1)], 0)
+			add_item(line[0..(start_index - 1)], line[(start_index + 1)..(end_index - 1)], line[(end_index + 5) .. (line.length - 2)])
 		end
 	end
 
