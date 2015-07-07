@@ -23,3 +23,4 @@ Serialize has only been tested in a Mac OSX environment, but will most likely wo
 *Disclaimers*
 
 - *Price currently doesn't save*
+- *Do NOT edit output.txt or you could cause problems with the program*
