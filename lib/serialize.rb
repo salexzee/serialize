@@ -26,6 +26,8 @@ loop do
 		items = container.return_items(container.items)
 		display_items(items)
 		puts line_break
+	when 'e'
+		true
 	when 'r'
 		puts line_break
 		print "What number item would you like to remove from the list? "
@@ -58,7 +60,7 @@ loop do
 		puts "Creator: #{App::CREATOR}"
 		puts seperator
 		puts line_break
-	when 'e'
+	when 'q'
 		container.save
 		exit
 	end

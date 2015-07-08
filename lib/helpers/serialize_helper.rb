@@ -1,10 +1,11 @@
 def options
 	puts "Add Item(a)"
 	puts "Display Items(d)"
+	puts "Edit Item(e)"
 	puts "Remove Item(r)"
 	puts "Search(s)"
 	puts "App Info(i)"
-	puts "Exit(e)"
+	puts "Quit(q)"
 end
 
 def seperator
