@@ -27,7 +27,24 @@ loop do
 		display_items(items)
 		puts line_break
 	when 'e'
-		true
+		puts line_break
+		print "What number item woule you like to edit? "
+		index = gets.chomp
+		if index.to_i > 0
+			index = index.to_i - 1
+			print "Item name(leave blank if not changing): "
+			edit_name = gets.chomp
+			puts edit_name.inspect
+			exit
+			print "Serial Number(leave blank if not changing): "
+			edit_serial_number = gets.chomp
+			print "Price(leave blank if not changing): "
+			edit_price = gets.chomp
+
+		else
+			print "There is no item in that location."
+		end
+		puts line_break
 	when 'r'
 		puts line_break
 		print "What number item would you like to remove from the list? "
