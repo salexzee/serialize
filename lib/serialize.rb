@@ -40,6 +40,7 @@ loop do
 			edit_serial_number = gets.chomp
 			print "Price(leave blank if not changing): "
 			edit_price = gets.chomp
+			
 
 		else
 			print "There is no item in that location."
