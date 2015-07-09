@@ -28,20 +28,21 @@ loop do
 		puts line_break
 	when 'e'
 		puts line_break
-		print "What number item woule you like to edit? "
+		print "What number item would you like to edit? "
 		index = gets.chomp
 		if index.to_i > 0
 			index = index.to_i - 1
 			print "Item name(leave blank if not changing): "
 			edit_name = gets.chomp
-			puts edit_name.inspect
-			exit
 			print "Serial Number(leave blank if not changing): "
 			edit_serial_number = gets.chomp
 			print "Price(leave blank if not changing): "
 			edit_price = gets.chomp
-			
-
+			items = container.return_items(container.items)
+			items[index].name = edit_name unless edit_name == ""
+			items[index].serial_number = edit_serial_number unless edit_serial_number == ""
+			items[index].price = edit_price unless edit_price == ""
+			puts "Item updated!" 
 		else
 			print "There is no item in that location."
 		end
