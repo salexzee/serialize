@@ -22,3 +22,4 @@ Serialize has only been tested in a Mac OSX environment, but will most likely wo
 
 *Disclaimers*
 - *Do NOT edit output.txt unless you know what you're doing or you could cause problems with the program*
+- *I'm welcome to any interesting changes that would make this project better*
