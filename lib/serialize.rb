@@ -29,6 +29,8 @@ loop do
 		display_items(items)
 		puts line_break
 	when 'e'
+		items = container.return_items(container.items)
+		display_items(items)
 		puts line_break
 		print disp.ask_for_number("edit")
 		index = gets.chomp
@@ -50,6 +52,8 @@ loop do
 		end
 		puts line_break
 	when 'r'
+		items = container.return_items(container.items)
+		display_items(items)
 		puts line_break
 		print disp.ask_for_number("remove")
 		index = gets.chomp

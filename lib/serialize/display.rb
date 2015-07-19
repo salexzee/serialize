@@ -21,7 +21,7 @@ class Display
 		return "Which number would you like to #{action}? "
 	end
 
-	def not_vallid_choice
+	def not_valid_choice
 		return "That is not a valid choice."
 	end
 end
