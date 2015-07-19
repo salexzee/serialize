@@ -1,6 +1,10 @@
 class Display
 	attr_reader :container
 
+	# Want to end up making larger methods which are
+	# mixtures of some of the current and planned
+	# methods to help clean up the serialize.rb file.
+
 	def initialize(container)
 		container = container
 	end
