@@ -1,5 +1,6 @@
 require_relative 'modules/app'
 require_relative 'serialize/container'
+require_relative 'serialize/display'
 require_relative 'helpers/serialize_helper.rb'
 
 puts "\nWelcome to Serialize."
