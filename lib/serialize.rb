@@ -6,6 +6,7 @@ puts "\nWelcome to Serialize."
 puts "An application for storing the serial numbers of valuable items."
 container = Container.new
 container.open
+disp = Display.new(container)
 loop do
 	options
 	print ":"
@@ -28,7 +29,7 @@ loop do
 		puts line_break
 	when 'e'
 		puts line_break
-		print "What number item would you like to edit? "
+		print disp.ask_for_number("edit")
 		index = gets.chomp
 		if index.to_i > 0
 			index = index.to_i - 1
@@ -44,22 +45,22 @@ loop do
 			items[index].price = edit_price unless edit_price == ""
 			puts "Item updated!" 
 		else
-			print "There is no item in that location."
+			print disp.no_item_in_location
 		end
 		puts line_break
 	when 'r'
 		puts line_break
-		print "What number item would you like to remove from the list? "
+		print disp.ask_for_number("remove")
 		index = gets.chomp
 		if index.to_i > 0
 			index = index.to_i - 1
 			if container.remove_item(index.to_i)
-				puts "Item removed successfully!"
+				puts disp.item_removed
 			else
-				puts "There is no item in that location."
+				puts disp.no_item_in_location
 			end
 		else
-			puts "That is not a valid choice."
+			puts disp.not_valid_choice
 		end
 		puts line_break
 	when 's'
