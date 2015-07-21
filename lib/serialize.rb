@@ -46,7 +46,7 @@ loop do
 			items[index].name = edit_name unless edit_name == ""
 			items[index].serial_number = edit_serial_number unless edit_serial_number == ""
 			items[index].price = edit_price unless edit_price == ""
-			puts "Item updated!" 
+			puts disp.updated
 		else
 			print disp.no_item_in_location
 		end

@@ -24,4 +24,8 @@ class Display
 	def not_valid_choice
 		return "That is not a valid choice."
 	end
+
+	def updated
+		return "Item updated!"
+	end
 end
