@@ -28,4 +28,9 @@ class Display
 	def updated
 		return "Item updated!"
 	end
+
+	def number_of_items(item_list)
+		return "There are #{item_list.length} items." unless item_list.length == 1
+		return "There is #{item_list.lenght} item."
+	end
 end
